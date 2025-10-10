@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Basic Forms</h1>
+    <form action="/submit" method="post">
+    <label for ="name">Name</label>
+    <input type="text" id="name" name="name" required /><br></br>
+    <label for ="email">Email</label>
+    <input type="email" id="email" email="email" required /><br></br>
+    <label for ="Male">Male</label>
+    <input type="radio" id="male" name="gender" value="male" required/>
+    <label for ="Female">Female</label>
+    <input type="radio" id="Female" name="gender" value="female" required/><br></br>
+    <h3>Terms And Conditions</h3>
+    <label>
+    <input type="checkbox" name="terms" required/>i agree to the terms and conditions</label><br></br>
+    <label for="Department">Department</label>
+    <select id="Department" name="Department">
+        <option value="ISE">ISE</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="MECH">MECH</option>
+        <option value="CIVIL">CIVIL</option>
+        <option value="AIML">AIML</option>
+    </select><br></br>
+    <label for="Password">Password</label>
+    <input type="password" id="Password" name="Password" required/><br></br>
+    <label for="Date">DOB</label>
+    <input type="date" id="Date" name="Date" required/><br></br>
+    <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
