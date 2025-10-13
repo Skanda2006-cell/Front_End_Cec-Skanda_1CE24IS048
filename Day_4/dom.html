@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Example</title>
+</head>
+<body>
+  <h1 id="heading">Hello World!</h1>
+  <p id="para">This paragraph will be updated using JavaScript.</p>
+
+  <script>
+    // Access elements by ID
+    const heading = document.getElementById("heading");
+    const paragraph = document.getElementById("para");
+
+    // Change text content
+    heading.innerText = "Welcome to DOM Tutorial";
+    paragraph.innerText = "DOM allows JS to manipulate HTML elements.";
+
+    // Change style
+    heading.style.color = "blue";
+    paragraph.style.fontSize = "18px";
+  </script>
+</body>
+</html>

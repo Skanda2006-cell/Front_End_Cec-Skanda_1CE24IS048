@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Selectors</title>
+</head>
+<body>
+  <h2 class="title">Heading 1</h2>
+  <h2 class="title">Heading 2</h2>
+  <p id="info">This is a paragraph.</p>
+
+  <script>
+    // 1. getElementById
+    const para = document.getElementById("info");
+    para.style.color = "green";
+
+    // 2. getElementsByClassName (returns HTMLCollection)
+    const titles = document.getElementsByClassName("title");
+    for (let t of titles) {
+      t.style.color = "purple";
+    }
+
+    // 3. querySelector (first match)
+    const firstTitle = document.querySelector(".title");
+    firstTitle.style.fontSize = "24px";
+
+    // 4. querySelectorAll (all matches)
+    const allTitles = document.querySelectorAll(".title");
+    allTitles.forEach((t) => t.style.fontWeight = "bold");
+  </script>
+</body>
+</html>

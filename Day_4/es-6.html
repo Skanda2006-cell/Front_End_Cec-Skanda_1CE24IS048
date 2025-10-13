@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //1.let and const
+        let name = "John";
+        const pi = 3.14;
+        console.log(name, pi);
+        //2.template literals
+        let age = 30;
+        let greeting = `Hello ${name},you ${age} years old.`;
+        console.log(greeting);
+        //3.default parameters
+        const multiply = (a, b = 2) => a * b;
+        console.log("multiply",multiply(5));
+        //4.destructuring array
+        const numbers = [1, 2, 3];
+        const [x, y, z] = numbers;
+        console.log("destructured",x, y, z);
+        //5.destructuring object
+        const person = { fName: "laura", city: "bengaluru" };
+        const { fName, city } = person;
+        console.log("destructured object",fName, city);
+        //6.spread operator
+        const arr1 = [1, 2];
+        const arr2 = [3, 4];
+        const combined = [...arr1, ...arr2];
+        console.log("combined array",combined);
+        //7.arrow functions
+        const add = (a, b) => a + b;
+        console.log("arrow add:",add(5, 10));
+        //Display something on the page 
+        document.getElementById("demo"). innerText = greeting;
+    </Script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listeners Example</title>
+  <style>
+    #demo {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event Listeners Example</h1>
+
+  <button id="clickBtn">Click Me!</button>
+  <p id="demo">Waiting for event...</p>
+
+  <input type="text" id="nameInput" placeholder="Type your name">
+  <p id="greetMsg"></p>
+
+  <script>
+    // 1. Click Event
+    const button = document.getElementById("clickBtn");
+    const demo = document.getElementById("demo");
+
+    button.addEventListener("click", () => {
+      demo.innerText = "Button was clicked!";
+      demo.style.color = "blue";
+    });
+
+    // 2. Input Event
+    const nameInput = document.getElementById("nameInput");
+    const greetMsg = document.getElementById("greetMsg");
+
+    nameInput.addEventListener("input", () => {
+      const name = nameInput.value;
+      greetMsg.innerText = name ? `Hello, ${name}!` : "";
+      greetMsg.style.color = "green";
+    });
+  </script>
+</body>
+</html>
