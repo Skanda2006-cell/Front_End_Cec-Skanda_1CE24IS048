@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wanderly - Book / Contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="../Project1/script.js" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Wanderly restauarnt</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav3"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav3">
+          <ul class="navbar-nav ms-auto nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Book / Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container my-5">
+      <h2>Reserve Your seats</h2>
+      <div class="row g-4">
+        <!-- FORM -->
+        <div class="col-lg-6">
+          <form id="bookingForm" onsubmit="submitBooking(event)">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input required type="text" class="form-control" id="name" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input required type="email" class="form-control" id="email" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Choose Package</label>
+              <select
+                id="packageSelect"
+                class="form-select"
+                onchange="updatePrice()"
+              >
+                <option value="Island Paradise|120">
+                  family package - $120/day
+                </option>
+                <option value="Highland Trek|100">
+                  Couple package - $100/day
+                </option>
+                <option value="City Highlights|80">
+                  Single package - $80/day
+                </option>
+              </select>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">tables</label>
+                <input
+                  type="number"
+                  min="1"
+                  value="1"
+                  id="days"
+                  class="form-control"
+                  onchange="calculateTotal()"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Price/day (USD)</label>
+                <input
+                  type="number"
+                  id="pricePerDay"
+                  class="form-control"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Total (USD)</label>
+              <input
+                type="text"
+                id="totalPrice"
+                class="form-control"
+                readonly
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message / Requests(also mention your dietary preferences)</label>
+              <textarea id="message" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-success">
+                Submit Booking
+              </button>
+              <button type="reset" class="btn btn-outline-secondary">
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- MAP / INFO -->
+        <div class="col-lg-6">
+          <h5>Contact Details</h5>
+          <p>Email: hello@wanderlyrestarent.example</p>
+          <p>Phone: +91 99966622210</p>
+
+          <!-- simple iframe map (placeholder) -->
+          <div class="ratio ratio-4x3 rounded-3 shadow-sm">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.5946%2C12.9716%2C77.5946%2C12.9716"
+              style="border: 0"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <!-- small list -->
+          <h6 class="mt-3">🍴 Quick Tips</h6>
+          <ul class="list-group">
+            <li class="list-group-item">Reserve early for weekends and holidays</li>
+            <li class="list-group-item">Mention dietary preferences while booking</li>
+            <li class="list-group-item">Arrive 10 minutes before your reservation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- confirmation modal on submit -->
+    <div class="modal fade" id="confirmModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center p-4">
+            <h5>Thanks! Your request was submitted.</h5>
+            <p id="confirmSummary"></p>
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container d-flex justify-content-between">
+        <div>© <span id="year3"></span> Wanderly</div>
+        <div><a href="index.html" class="text-light">Home</a></div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wanderly REASTAURENT</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🍽️ Wanderly restauarnt</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Book / Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CAROUSEL -->
+    <section class="container mt-4">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-3 shadow-sm">
+          <div class="carousel-item active">
+            <img
+              src="../Project1/images/1000.jpg"
+              class="d-block w-100"
+              alt="food"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Junkies</h3>
+              <p>Burgers,frenchfries and cokes.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../Project1/images/1000_F_321941897_1IemuLDDsuBlNyK3nCy8DpHgW3DKJu2B.jpg"
+              class="d-block w-100"
+              alt="mountain"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>long masala dosa</h3>
+              <p>eat with pleasure</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../Project1/images/1000_F_1004713584_9P4k7dIDLJ2srVC2hSHHB46hbJzEQito.jpg"
+              class="d-block w-100"
+              alt="city"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Gobi Manchurian</h3>
+              <p>spicy and hot meal.</p>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Prev</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ABOUT + VIDEO -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2>About Wanderly restauarnt</h2>
+          <p>
+            🎙️ "Welcome to Wanderkly Restaurant — where every bite feels like a new adventure!"
+
+Step into a world of flavor at Wanderkly, a place where food meets wanderlust. From sizzling appetizers to signature main courses crafted with passion, every dish tells a story of taste and travel. The warm ambiance, cozy interiors, and a hint of adventure in every corner make Wanderkly the perfect destination for food lovers who crave something extraordinary.
+
+Whether you’re here for a romantic dinner, a friendly hangout, or a family celebration — Wanderkly makes every moment deliciously memorable. 🍽️✨
+
+Wanderkly Restaurant — Taste the journey, live the flavor.
+          </p>
+
+          <ul class="list-group mb-3">
+            <li class="list-group-item">Handpicked foods</li>
+            <li class="list-group-item">clasic menus</li>
+            <li class="list-group-item">veg and non veg counters</li>
+          </ul>
+
+          <!-- Collapse for more details -->
+          <p>
+            <a
+              class="btn btn-outline-primary"
+              data-bs-toggle="collapse"
+              href="#moreAbout"
+              role="button"
+              >More about us</a
+            >
+          </p>
+          <div class="collapse" id="moreAbout">
+            <div class="card card-body">
+              the best place to hangout with friends and family. we provide the best foods with hygenic conditions. we have both veg and non veg counters. we also provide home delivery services.  
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <!-- Embedded video -->
+          <div class="ratio ratio-16x9 rounded-3 shadow-sm">
+            <iframe
+              src="https://www.youtube.com/embed/xPPLbEFbCAo"
+              title="Promo video"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="container mb-5">
+      <h3 class="mb-3">MOST PICKED FOODS IN OUR Restaurant</h3>
+      <div class="row g-3">
+        <div class="col-sm-6 col-md-4">
+          <div class="card overflow-hidden h-100">
+            <img
+              src="../Project1/images/dosa1.jpeg"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">masala dosa</h5>
+              <p class="card-text">long and mouth watering.</p>
+              <button
+                class="btn btn-sm btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#bookModal"
+                onclick="setPackage('reserve seats', 120)"
+              >
+                book now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card overflow-hidden h-100">
+            <img
+              src="../Project1/images/gobi.jpeg"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Gobi Manchurian </h5>
+              <p class="card-text">spicy and crunchy.</p>
+              <button
+                class="btn btn-sm btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#bookModal"
+                onclick="setPackage('reserve seats',120)"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card overflow-hidden h-100">
+            <img
+              src="../Project1/images/images.jpeg"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">Chicken</h5>
+              <p class="card-text">crunchy and finger licking good.</p>
+              <button
+                class="btn btn-sm btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#bookModal"
+                onclick="setPackage('reserve seats', 120)"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <div style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: bold;">
+  <p>
+    TO ORDER OUR FOODS ONLINE CLICK HERE:
+    <a href="https://www.zomato.com/bangalore/taste-haven-sarjapur-road-bangalore" target="_blank" style="color: #E23744; text-decoration: none;">
+      Order on Zomato
+    </a>
+  </p>
+</div
+    <!-- LIST + CTA -->
+    <section class="container mb-5">
+      <div class="row">
+        <div class="col-md-8">
+          <h4>Top Reasons to Eat at Our Restaurant</h4>
+          <ol>
+            <li>Global flavors inspired by world cuisines 🌍</li>
+            <li>Cozy ambience with vibrant vibes ✨</li>
+            <li>Freshly prepared dishes made with love 👨‍🍳</li>
+          </ol>
+        </div>
+        <div class="col-md-4 text-end">
+          <a href="packages.html" class="btn btn-lg btn-success"
+            >See packages</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING MODAL (used by various buttons) -->
+    <div class="modal fade" id="bookModal" tabindex="-1">
+      <div class="modal-dialog">
+        <form
+          id="modalBookingForm"
+          class="modal-content"
+          onsubmit="handleModalBooking(event)"
+        >
+          <div class="modal-header">
+            <h5 class="modal-title">Quick Book</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="modalPackageName" />
+            <div class="mb-2">
+              <label class="form-label">Package</label>
+              <input
+                type="text"
+                id="modalPackage"
+                class="form-control"
+                readonly
+              />
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Price per SEAT (USD)</label>
+              <input
+                type="number"
+                id="modalPrice"
+                class="form-control"
+                readonly
+              />
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Days</label>
+              <input
+                type="number"
+                id="modalDays"
+                class="form-control"
+                min="1"
+                value="1"
+                onchange="modalCalc()"
+              />
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Total</label>
+              <input
+                type="text"
+                id="modalTotal"
+                class="form-control"
+                readonly
+              />
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Your Email</label>
+              <input
+                type="email"
+                id="modalEmail"
+                required
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button class="btn btn-primary" type="submit">
+              Confirm Booking
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-4">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <div>© <span id="year"></span> Wanderly — EAT WITH JOY</div>
+        <div>
+          <a href="#" class="text-light me-3">Privacy</a>
+          <a href="#" class="text-light">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS & dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
