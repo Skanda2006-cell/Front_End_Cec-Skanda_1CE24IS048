@@ -11,6 +11,26 @@ const spices = [
     name: "Cumin Seeds",
     img: "https://t3.ftcdn.net/jpg/07/11/82/16/360_F_711821694_gIzpYDAE246N9Bh6DaWDsK7xOOKg9Rfv.jpg",
   },
+  {
+    name: "Black Pepper",
+    img: "https://keralaspicecart.com/wp-content/uploads/2020/10/layer1-1.png",
+  },
+  {
+    name: "Cardamom",
+    img: "https://vibrantliving.in/cdn/shop/files/CardamomGreen.png?v=1731059940&width=600",
+  },
+  {
+    name: "Coriander Seeds",
+    img: "https://i0.wp.com/gachwala.in/wp-content/uploads/2022/07/Coriander-Seeds-Chinese-parsley.jpg?fit=1000%2C1000&ssl=1",
+  },
+  {
+    name: "Cloves",
+    img: "https://kerala.me/wp-content/uploads/2015/12/Cloves.jpg",
+  },
+  {
+    name: "Fenugreek Seeds",
+    img: "https://5.imimg.com/data5/SELLER/Default/2022/5/CK/IG/RY/38768188/methi-small-vip-10kg.jpeg",
+  },
 ];
 
 const Products = () => {
@@ -24,6 +44,21 @@ const Products = () => {
         color: "#3b2f2f",
       }}
     >
+      {/* Bulk Discount Banner */}
+      <div
+        style={{
+          backgroundColor: "#a4161a",
+          color: "#fff",
+          padding: "1rem 2rem",
+          borderRadius: "12px",
+          marginBottom: "3rem",
+          fontSize: "1.3rem",
+          fontWeight: "700",
+        }}
+      >
+        Special Bulk Discounts Available on All Spices! Contact us for details.
+      </div>
+
       <h2
         style={{
           color: "#a4161a",
@@ -54,7 +89,13 @@ const Products = () => {
                   ? "linear-gradient(180deg, #fff1eb, #ffd7c2)"
                   : i === 1
                   ? "linear-gradient(180deg, #fff9f2, #ffe5b9)"
-                  : "linear-gradient(180deg, #fdfdfd, #ffe9cc)",
+                  : i === 2
+                  ? "linear-gradient(180deg, #fdfdfd, #ffe9cc)"
+                  : i === 3
+                  ? "linear-gradient(180deg, #fff2e6, #ffddb7)"
+                  : i === 4
+                  ? "linear-gradient(180deg, #fff4ea, #ffdec4)"
+                  : "linear-gradient(180deg, #faf9f7, #ffebd5)",
               borderRadius: "1rem",
               boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
               padding: "1.5rem",
@@ -106,6 +147,49 @@ const Products = () => {
             </p>
           </div>
         ))}
+      </div>
+
+      {/* Call-to-Action Section */}
+      <div
+        style={{
+          marginTop: "4rem",
+          padding: "3rem 1.5rem",
+          backgroundColor: "#ffe8d6",
+          borderRadius: "12px",
+          boxShadow: "0 8px 20px rgba(164, 22, 26, 0.1)",
+          maxWidth: "700px",
+          marginLeft: "auto",
+          marginRight: "auto",
+          textAlign: "center",
+        }}
+      >
+        <h3
+          style={{ color: "#a4161a", fontWeight: "700", marginBottom: "1rem" }}
+        >
+          Ready to Stock Up Your Store?
+        </h3>
+        <p style={{ color: "#4b3b32", fontSize: "1.1rem", marginBottom: "2rem" }}>
+          Contact us today for a personalized quote and discover how we can support
+          your business with premium spices at wholesale prices.
+        </p>
+        <a
+          href="/contact"
+          style={{
+            backgroundColor: "#a4161a",
+            color: "#fff",
+            padding: "0.9rem 2.5rem",
+            borderRadius: "30px",
+            fontWeight: "700",
+            fontSize: "1.1rem",
+            textDecoration: "none",
+            boxShadow: "0 8px 24px rgba(164, 22, 26, 0.3)",
+            transition: "background-color 0.3s",
+          }}
+          onMouseEnter={(e) => (e.target.style.backgroundColor = "#7c0f13")}
+          onMouseLeave={(e) => (e.target.style.backgroundColor = "#a4161a")}
+        >
+          Contact Us Now
+        </a>
       </div>
     </section>
   );

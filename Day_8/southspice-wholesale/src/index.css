@@ -1,0 +1,111 @@
+:root {
+  --primary-red: #a4161a;
+  --primary-cream: #fff3e0;
+  --primary-light-cream: #ffe8d6;
+  --text-dark: #3b2f2f;
+  --text-light: #4a403a;
+  --background-dark: #242424;
+  --background-light: #ffffff;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--text-light);
+  background-color: var(--background-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  color: var(--primary-red);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+a {
+  font-weight: 600;
+  color: var(--primary-red);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover,
+a:focus {
+  color: #7c0f13;
+  outline: none;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--primary-red);
+  color: white;
+  box-shadow: 0 4px 10px rgba(164, 22, 26, 0.6);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover,
+button:focus {
+  background-color: #7c0f13;
+  outline: none;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary-cream), var(--primary-light-cream));
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.info-cards, .info-section, .products-grid, .services-grid, .team-grid, .contact-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-dark);
+    background-color: var(--background-light);
+  }
+  a:hover {
+    color: #9e2227;
+  }
+  button {
+    background-color: #b53036;
+  }
+}
