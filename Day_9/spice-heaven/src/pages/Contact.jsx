@@ -190,7 +190,7 @@ export default function Contact() {
           <div style={{ width: '100%', height: 320 }}>
             <iframe
               title="Bangalore, Karnataka, India"
-              src="https://www.google.com/maps?q=Bangalore%2C%20Karnataka%2C%20India&hl=en&z=12&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3889.27843512827!2d77.54834637507507!3d12.889809287418064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bae3eecdc883cc1%3A0x1d44e022ac75925a!2sVHQ2%2BW9F%20City%20Engineering%20College%2C%20Kanakapura%20Main%20Rd%2C%20near%20METRO%20Station%2C%20Doddakallasandra%2C%20Bikasipura%2C%20Bengaluru%2C%20Karnataka%20560062!3m2!1d12.8898093!2d77.5509213!5e0!3m2!1sen!2sin!4v1760779248816!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
               width="100%"
               height="100%"
               style={{ border: 0, display: 'block' }}
